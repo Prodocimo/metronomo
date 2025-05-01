@@ -1,0 +1,56 @@
+@charset "UTF=8";
+
+/* Estilos gerais */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* Estilo do círculo */
+#circle {
+  width: 200px;
+  height: 200px;
+  border: 4px solid black;
+  border-radius: 50%;
+  position: relative;
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo do ponteiro */
+#hand {
+  width: 2px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: rotate(0deg);
+}
+
+/* Estilo das subdivisões dentro do círculo */
+.subdivision {
+  width: 2px;
+  height: 10px;
+  background: gray;
+  position: absolute;
+  top: 86px;
+  left: 50%;
+  transform-origin: center bottom;
+  transform: rotate(0deg) translateY(-90px); /* Aparece dentro do círculo */
+}
+
+.subdivision.acento {
+  background: red;
+  height: 14px; /* Maior altura para o acento */
+}
+
+/* Estilo dos controles */
+input, select, button {
+  margin-top: 10px;
+}

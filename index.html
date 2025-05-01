@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Metrônomo</title>
+  <link rel="stylesheet" href="assets/style/style.css"> <!-- Link para o CSS -->
+</head>
+<body>
+  <h1>Metrônomo</h1>
+  <div id="circle">
+    <div id="hand"></div>
+    <div id="subdivision-line"></div> <!-- Linha de subdivisão -->
+  </div>
+  <label>BPM: <input type="number" id="bpm" value="60" min="30" max="300"></label><br>
+  <label>Compasso: 
+    <select id="compasso">
+      <option value="4">4/4</option>
+      <option value="3">3/4</option>
+      <option value="6">6/8</option>
+    </select>
+  </label><br>
+  <label>Subdivisões por batida:
+    <select id="subdivisoes">
+      <option value="1">1 (sem subdivisão)</option>
+      <option value="2">2 (colcheia)</option>
+      <option value="3">3 (ternária)</option>
+      <option value="4">4 (semicolcheia)</option>
+    </select>
+  </label><br>
+  <button onclick="toggleMetronome()">Iniciar/Parar</button>
+
+  <!-- Áudio -->
+  <audio id="tick" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg" preload="auto"></audio>
+  <audio id="tick-acento" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+  <audio id="tick-sub" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+
+  <script src="assets/script.js"></script> <!-- Link para o JS -->
+</body>
+</html>
+
+
+
+  
+  <!-- <audio id="tick" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg" preload="auto"></audio>
+  <audio id="tick-acento" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+  <audio id="tick-sub" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio> -->
+
+
